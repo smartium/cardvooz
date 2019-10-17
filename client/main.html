@@ -6,10 +6,11 @@
   <script language="javascript" type="text/javascript" src="libraries/P5_js_Capture.js"></script>
 </head>
 <body>
+  {{#if renderPage ''}}
   <div class="content">
     <div id="scene"></div>
     <div class="gui">
-      <div class="text">
+      <div class="text">''
         <h1>{{audioVolume}} dB</h1>
       </div>
     </div>
@@ -24,4 +25,11 @@
     ">
   </div>
 </div>
+{{/if}}
+
+{{#if renderPage 'tablet'}}
+<div class="tablet">
+  <h1>TABLET</h1>
+</div>
+{{/if}}
 </body>

@@ -1,6 +1,7 @@
 import { Template } from 'meteor/templating';
 import { ReactiveVar } from 'meteor/reactive-var';
 html2canvas = require('html2canvas');
+import '../imports/tablet.scss';
 import './main.html';
 
 audioVolume = new ReactiveVar(00);
@@ -53,13 +54,19 @@ Template.body.onRendered(function bodyOnRendered() {
       $("h1").css("color", "#FF0000");
     }
   });
-  console.log(document.getElementsByTagName("CANVAS"));
 
   // Meteor.setTimeout(()=> {
   //   html2canvas(document.body).then(function(canvas) {
   //     document.body.appendChild(canvas);
   //   });
   // }, 8000);
+
+  if (document.location.toString().split('/')[3] == 'tablet') {
+    console.log(document.getElementsByTagName("CANVAS")[0]);
+    // $('#defaultCanvas0').hide();
+    document.getElementsByTagName("CANVAS")[0].style.display = "none";
+    console.log($('#defaultCanvas0'));
+  }
 });
 
 Template.body.helpers({
