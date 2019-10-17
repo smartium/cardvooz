@@ -1,4 +1,6 @@
 import { Meteor } from 'meteor/meteor';
+
+import '../imports/collections';
 const dgram = require("dgram");
 const oscmsg = require("osc-msg");
 
@@ -21,5 +23,12 @@ Meteor.methods({
     const socket = dgram.createSocket("udp4");
     socket.send(buffer, 0, buffer.length, SEND_PORT, SEND_IP);
     console.log(`Mensagem OSC "${message.address}" enviada para o IP ${SEND_IP} na porta ${SEND_PORT}`);
+  },
+
+  cadastrar(nome) {
+    Cadastros.insert({
+      timestamp: new Date().valueOf(),
+      name: nome
+    });
   }
 });

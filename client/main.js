@@ -4,6 +4,8 @@ html2canvas = require('html2canvas');
 
 import './main.html';
 import './tablet';
+import './cadastro';
+import './cabine';
 
 audioVolume = new ReactiveVar(00);
 
@@ -12,6 +14,8 @@ peakMeterStyle = new ReactiveVar({
   height: '672px',
   bottom: '408px'
 });
+
+cabineState = new ReactiveVar('idle');
 
 Meteor.startup(()=> {
 });

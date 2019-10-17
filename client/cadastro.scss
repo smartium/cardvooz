@@ -1,0 +1,57 @@
+* {
+  padding:0;
+  margin:0;
+  vertical-align:baseline;
+  list-style:none;
+  border:0
+}
+
+canvas {
+  display: none;
+}
+
+.cadastro {
+  width: 1280px;
+  height: 800px;
+  position: fixed;
+  background-image: url('images/bg_tablet.png');
+  background-size: cover;
+  text-align: center;
+  // transform: scale(0.5);
+  // transform-origin: top left;
+
+  .divForm {
+    position: absolute;
+    top: 350px;
+    width: 100%;
+
+    .form {
+      width: 900px;
+      margin: 0 auto;
+      padding: 50px;
+      background-color: #fff;
+      border-radius: 20px;
+      top: 500px;
+
+      input {
+        width: 80%;
+        height: 80px;
+        text-align: center;
+        color: #570093;
+        font-size: 3em;
+        border: 3px solid #570093;
+        border-radius: 20px;
+      }
+
+      button {
+        margin-top: 30px;
+        width: 80%;
+        height: 60px;
+        background-color: #570093;
+        border-radius: 20px;
+        color: #fff;
+        font-size: 2em;
+      }
+    }
+  }
+}
