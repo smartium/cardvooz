@@ -1,3 +1,11 @@
+* {
+  padding:0;
+  margin:0;
+  vertical-align:baseline;
+  list-style:none;
+  border:0
+}
+
 canvas {
   display: none;
 }
@@ -9,6 +17,55 @@ canvas {
   background-image: url('images/bg_tablet.png');
   background-size: cover;
   text-align: center;
+}
+
+.mybuttons {
+  position: absolute;
+  width: 1920px;
+  height: 600px;
+  top: 450px;
+  left: 0px;
+
+  .oscButton {
+    width: 250px;
+    height: 200px;
+    margin: 20px;
+    border: 3px solid #570093;
+    color: #570093;
+    font-size: 1.5em;
+    font-weight: bolder;
+    border-radius: 15px;
+  }
+
+  #oscButton1 {
+    background-image: url('images/bg_btn_1.jpg');
+    background-size: cover;
+  }
+
+  #oscButton2 {
+    background-image: url('images/bg_btn_2.jpg');
+    background-size: cover;
+  }
+
+  #oscButton3 {
+    background-image: url('images/bg_btn_3.jpg');
+    background-size: cover;
+  }
+
+  #oscButton4 {
+    background-image: url('images/bg_btn_4.jpg');
+    background-size: cover;
+  }
+
+  #oscButton5 {
+    background-image: url('images/bg_btn_5.jpg');
+    background-size: cover;
+  }
+
+  #oscButton6 {
+    background-image: url('images/bg_btn_6.jpg');
+    background-size: cover;
+  }
 }
 
 .title {
