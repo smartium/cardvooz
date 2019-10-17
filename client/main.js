@@ -28,9 +28,6 @@ Template.body.onRendered(function bodyOnRendered() {
     beatMin: .2
   });
 
-
-
-
   audioAnalyzer.start((audioData) => {
     scene(audioData);
 
@@ -66,6 +63,10 @@ Template.body.onRendered(function bodyOnRendered() {
 });
 
 Template.body.helpers({
+  renderPage(page) {
+    return document.location.toString().split('/')[3] == page ? true : false;
+  },
+
   audioVolume() {
     return audioVolume.get();
   },
