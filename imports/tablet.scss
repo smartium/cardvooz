@@ -17,9 +17,11 @@ canvas {
   background-image: url('images/bg_tablet.png');
   background-size: cover;
   text-align: center;
+  transform: scale(0.5);
+  transform-origin: top left;
 }
 
-.mybuttons {
+.mybuttons, .videobutton {
   position: absolute;
   width: 1920px;
   height: 600px;
@@ -66,6 +68,16 @@ canvas {
     background-image: url('images/bg_btn_6.jpg');
     background-size: cover;
   }
+
+  #oscButton7 {
+    width: 1720px;
+    height: 120px;
+    font-size: 4em;
+  }
+}
+
+.videobutton {
+  top: 700px;
 }
 
 .title {

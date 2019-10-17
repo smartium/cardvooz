@@ -27,6 +27,10 @@ Template.tablet.events({
       case 'oscButton6':
       Meteor.call('sendOsc', '/composition/columns/6/connect');
       break;
+
+      case 'oscButton7':
+      Meteor.call('sendOsc', '/composition/columns/7/connect');
+      break;
     }
   }
 });
