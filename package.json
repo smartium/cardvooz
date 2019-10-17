@@ -1,0 +1,30 @@
+{
+  "name": "sicoobAudioManager",
+  "private": true,
+  "scripts": {
+    "start": "meteor run",
+    "test": "meteor test --once --driver-package meteortesting:mocha",
+    "test-app": "TEST_WATCH=1 meteor test --full-app --driver-package meteortesting:mocha",
+    "visualize": "meteor --production --extra-packages bundle-visualizer"
+  },
+  "dependencies": {
+    "@babel/runtime": "^7.3.4",
+    "dat-gui": "^0.5.0",
+    "html2canvas": "^1.0.0-rc.5",
+    "https": "^1.0.0",
+    "lodash": "^4.17.15",
+    "meteor-node-stubs": "^0.4.1",
+    "three": "^0.109.0",
+    "three-orbit-controls": "^82.1.0"
+  },
+  "meteor": {
+    "mainModule": {
+      "client": "client/main.js",
+      "server": "server/main.js"
+    },
+    "testModule": "tests/main.js"
+  },
+  "devDependencies": {
+    "web-audio-peak-meter": "^1.0.0"
+  }
+}

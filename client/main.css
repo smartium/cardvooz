@@ -1,0 +1,91 @@
+@font-face {
+  font-family: "Skrinia";
+  src: url("fonts/Skrinia-Bold.otf");
+}
+
+html, body {
+  /* min-height: 100%; */
+  width: 504px;
+  height: 672px;
+  border: 1px dashed red;
+  /* padding: 10px; */
+}
+
+body {
+  background: #222;
+  color: #999;
+  margin: 0 auto;
+  padding: 0;
+  overflow: hidden;
+  font-family: "Skrinia";
+  border: 1px dashed green;
+}
+
+a {
+  color: inherit;
+}
+
+a:hover {
+  color: yellow;
+}
+
+.vooz-logo {
+  width: 40%;
+}
+
+.content {
+  /* display: none; */
+  width: 504px;
+  height: 672px;
+  border: 2px dashed blue;
+  background-color: #666;
+}
+
+#scene {
+  width: 504px;
+  height: 672px;
+  margin: 100px 0 0 -470px;
+}
+
+.gui {
+  position: fixed;
+  left: 0px;
+  top: 0px;
+}
+
+.text {
+  position: absolute;
+  width: 504px;
+  left: 10px;
+}
+
+.meter {
+  position: fixed;
+  left: 0px;
+  bottom: 0px;
+  width: 220px;
+  height: 10px;
+  background-color: #fff;
+}
+
+h1 {
+  position: absolute;
+  right: 20px;
+  font-size: 5em;
+  color: yellow;
+}
+
+.p5Canvas {
+  width: 504px;
+  height: 672px;
+  position: fixed;
+  top: 147px;
+  left: 0px;
+  text-align: center;
+  border: 2px solid #FF0;
+  opacity: 0.5;
+}
+
+#peakMeter {
+  border: 1px dotted blue;
+}
