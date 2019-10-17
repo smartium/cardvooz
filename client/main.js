@@ -1,8 +1,9 @@
 import { Template } from 'meteor/templating';
 import { ReactiveVar } from 'meteor/reactive-var';
 html2canvas = require('html2canvas');
-import '../imports/tablet.scss';
+
 import './main.html';
+import './tablet';
 
 audioVolume = new ReactiveVar(00);
 
@@ -16,56 +17,54 @@ Meteor.startup(()=> {
 });
 
 Template.body.onRendered(function bodyOnRendered() {
-  // import '../imports/libraries/p5.min';
-  // import '../imports/libraries/p5.dom.min';
-  // import '../imports/libraries/P5_js_Capture';
-  import AudioAnalyzer from '../imports/AudioAnalyzer/AudioAnalyzer';
-  import scene from '../imports/scene';
-
-  audioAnalyzer = new AudioAnalyzer({
-    volSens: 2,
-    beatHoldTime: 45,
-    beatDecayRate: .9,
-    beatMin: .2
-  });
-
-  audioAnalyzer.start((audioData) => {
-    scene(audioData);
-
-    // $("h1").css("top", 1050+(audioData.volume*1050)*-1);
-    $("h1").css("top", '20px');
-
-    if (audioData.volume < 0.3) {
-      audioVolume.set(0);
-    }
-
-    // console.log(audioData.volume);
-    // if (audioData.volume > 0.1) {
-    audioVolume.set(Math.round(audioData.volume*100));
-    // }
-    if (audioData.volume < 0.7) {
-      $("h1").css("color", "#00FF00");
-    }
-    if (audioData.volume > 0.7) {
-      $("h1").css("color", "#FFFF00");
-
-    }
-    if (audioData.volume > 0.9) {
-      $("h1").css("color", "#FF0000");
-    }
-  });
-
-  // Meteor.setTimeout(()=> {
-  //   html2canvas(document.body).then(function(canvas) {
-  //     document.body.appendChild(canvas);
-  //   });
-  // }, 8000);
-
   if (document.location.toString().split('/')[3] == 'tablet') {
-    console.log(document.getElementsByTagName("CANVAS")[0]);
-    // $('#defaultCanvas0').hide();
-    document.getElementsByTagName("CANVAS")[0].style.display = "none";
-    console.log($('#defaultCanvas0'));
+    // import '../imports/tablet.scss';
+  }
+  else {
+    // import '../imports/libraries/p5.min';
+    // import '../imports/libraries/p5.dom.min';
+    // import '../imports/libraries/P5_js_Capture';
+    import AudioAnalyzer from '../imports/AudioAnalyzer/AudioAnalyzer';
+    import scene from '../imports/scene';
+
+    audioAnalyzer = new AudioAnalyzer({
+      volSens: 2,
+      beatHoldTime: 45,
+      beatDecayRate: .9,
+      beatMin: .2
+    });
+
+    audioAnalyzer.start((audioData) => {
+      scene(audioData);
+
+      // $("h1").css("top", 1050+(audioData.volume*1050)*-1);
+      $("h1").css("top", '20px');
+
+      if (audioData.volume < 0.3) {
+        audioVolume.set(0);
+      }
+
+      // console.log(audioData.volume);
+      // if (audioData.volume > 0.1) {
+      audioVolume.set(Math.round(audioData.volume*100));
+      // }
+      if (audioData.volume < 0.7) {
+        $("h1").css("color", "#00FF00");
+      }
+      if (audioData.volume > 0.7) {
+        $("h1").css("color", "#FFFF00");
+
+      }
+      if (audioData.volume > 0.9) {
+        $("h1").css("color", "#FF0000");
+      }
+    });
+
+    // Meteor.setTimeout(()=> {
+    //   html2canvas(document.body).then(function(canvas) {
+    //     document.body.appendChild(canvas);
+    //   });
+    // }, 8000);
   }
 });
 
