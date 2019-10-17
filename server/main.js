@@ -5,7 +5,7 @@ const dgram = require("dgram");
 const oscmsg = require("osc-msg");
 
 const SEND_PORT = 7000;
-const SEND_IP = '10.10.15.1';
+const SEND_IP = '10.10.15.3';
 
 Meteor.startup(() => {
   // code to run on server at startup
