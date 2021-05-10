@@ -12,7 +12,7 @@
     "dat-gui": "^0.5.0",
     "html2canvas": "^1.0.0-rc.5",
     "https": "^1.0.0",
-    "lodash": "^4.17.15",
+    "lodash": "^4.17.21",
     "meteor-node-stubs": "^0.4.1",
     "osc-msg": "^1.2.0",
     "three": "^0.109.0",
